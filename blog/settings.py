@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = "lv)-=^8fub_yuojc^%dhl^706@wk0yakf(6m6u_d6p5ie1xs3b"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["blog.swordpower.tk"]
 
