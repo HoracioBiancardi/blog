@@ -1,0 +1,67 @@
+{% load static %}
+<!--_nav.html-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="{% static 'logos/logo11.png' %}" width="40" height="40" class="d-inline-block align-center" alt="">
+            Blog do Swordpower</a>
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                {% comment %} <li class="nav-item">
+                    <a class="nav-link" href="{% url 'post_categoria' 'Curiosidades' %}">Curiosidades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'post_categoria' 'Entretenimento' %}">Entretenimento</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'post_categoria' 'Terror' %}">Terror</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'post_categoria' 'Tecnologia' %}">Tecnologia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'post_categoria' 'Mundo' %}">Mundo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'post_categoria' 'Nerd' %}">Nerd</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'post_categoria' 'Inovação' %}">Inovação</a>
+                </li> {% endcomment %}
+                
+                 <!-- TODO tenho que testar -->
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" 
+                    href="#" 
+                    id="navbarDropdown" 
+                    role="button" 
+                    data-toggle="dropdown" 
+                    aria-haspopup="true" 
+                    aria-expanded="false">
+                        Categorias
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% for categoria in categorias%}
+                        <a class="dropdown-item" href="{% url 'post_categoria' categoria %}">{{categoria}}</a>
+                        {% endfor %}
+                    </div>
+                </li> 
+
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0 ml-lg-4" action="{% url 'post_busca' %}">
+                <input name="termo" value="{{ request.GET.termo }}" class="form-control mr-sm-2" type="search" placeholder="Pesquisar"
+                       aria-label="Search">
+            </form>
+        </div>
+    </div>
+</nav>
+<!--/_nav.html-->
