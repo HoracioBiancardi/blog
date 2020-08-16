@@ -74,6 +74,7 @@ class PostDetalhes(UpdateView):
     form_class = FormComentario
     context_object_name = "post"
 
+  
     def get_context_data(self, **kwargs):
         contexto = super().get_context_data(**kwargs)
         post = self.get_object()
@@ -82,6 +83,7 @@ class PostDetalhes(UpdateView):
         )
 
         contexto["comentarios"] = comentarios
+        contexto["categorias"] = Categoria.objects.all()
         return contexto
 
     def form_valid(self, form):
