@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = "lv)-=^8fub_yuojc^%dhl^706@wk0yakf(6m6u_d6p5ie1xs3b"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["blog.swordpower.tk"]
 
@@ -164,7 +164,7 @@ AUTHENTICATION_BACKENDS = [
 AXES_COOLOFF_TIME=1
 AXES_LOCKOUT_TEMPLATE="axes_lockout.html"
 
-
+PREPEND_WWW = True
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
