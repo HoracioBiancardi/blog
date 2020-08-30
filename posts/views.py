@@ -55,10 +55,7 @@ class PostBusca(PostIndex):
 
 class PostCategoria(PostIndex):
     template_name = "posts/post_categoria.html"
-    def get_context_data(self, **kwargs):
-        context = super(PostIndex, self).get_context_data(**kwargs)
-        context["categorias"] = Categoria.objects.all()
-        return context
+
 
     def get_queryset(self):
         qs = super().get_queryset()
