@@ -42,8 +42,14 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.humanize",
     "crispy_forms",
+    "django.contrib.sites",
+    "django.contrib.sitemaps",
     
 ]
+
+SITE_ID = 1
+
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -166,7 +172,7 @@ AUTHENTICATION_BACKENDS = [
 AXES_COOLOFF_TIME=1
 AXES_LOCKOUT_TEMPLATE="axes_lockout.html"
 
-PREPEND_WWW = True
+
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
