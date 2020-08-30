@@ -11,7 +11,7 @@ from categorias.models import Categoria
 class PostIndex(ListView):
     model = Post
     template_name = "posts/index.html"
-    paginate_by = 6
+    paginate_by = 9
     context_object_name = "posts"
 
     def get_context_data(self, **kwargs):
