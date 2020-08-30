@@ -173,6 +173,8 @@ CSRF_COOKIE_SECURE = True
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
+INSTALLED_APPS += ("robots",)
+
 
 try:
     from .local_settings import *
