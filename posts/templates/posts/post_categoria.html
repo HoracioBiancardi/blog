@@ -1,5 +1,3 @@
 {% extends 'posts/index.html' %}
 
-{% block titulo %} Categoria: {{ categoria}} | Swordpower {% endblock titulo %}
-
-
+{% block titulo %}{{ view.kwargs.categoria|title }} | Categoria | Swordpower {% endblock %}
