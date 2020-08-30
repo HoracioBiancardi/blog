@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.humanize",
     "crispy_forms",
+    
 ]
 
 MIDDLEWARE = [
@@ -68,6 +69,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                
             ],
         },
     },
@@ -172,8 +174,6 @@ CSRF_COOKIE_SECURE = True
 
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
-
-INSTALLED_APPS += ("robots",)
 
 
 try:
