@@ -23,8 +23,10 @@ from django.contrib.sitemaps.views import sitemap
 from blog.sitemaps import PostSitemap
 
 sitemaps = {
-    'posts':PostSitemap,
+    "pages": StaticSitemap,
+    "posts": PostSitemap,
 }
+
 
 urlpatterns = [
     path("", include("posts.urls")),
