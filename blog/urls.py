@@ -19,8 +19,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
+from blog.sitemaps import StaticSitemap, PostSitemap
 from django.contrib.sitemaps.views import sitemap
-from blog.sitemaps import PostSitemap
 
 sitemaps = {
     "pages": StaticSitemap,
