@@ -1,4 +1,10 @@
 /* --------------- colisao com animacao ------*/
+.container {
+  width: 85% !important;
+  overflow: hidden;
+
+}
+
 .ima {
   overflow: hidden;
 }
