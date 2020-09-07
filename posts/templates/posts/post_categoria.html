@@ -1,3 +1,10 @@
 {% extends 'posts/index.html' %}
 
 {% block titulo %}{{ view.kwargs.categoria|title }} | Categoria | Swordpower {% endblock %}
+
+{% block titulo_conteudo %}
+<div class="text-shadow" data-aos="fade-right">
+	<h1 ><strong class="text-light d-inline bg-dark">CATEGORIA </strong> 
+    <span>{{ view.kwargs.categoria|title }}</span> </h1>
+</div>
+{% endblock titulo_conteudo %}

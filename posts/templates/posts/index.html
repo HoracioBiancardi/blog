@@ -6,14 +6,19 @@
 
 {% block conteudo %}
 
-{% include  'parciais/_carousel.html' %}
+{% comment %} {% include  'parciais/_carousel.html' %} {% endcomment %}
 
+{% block titulo_conteudo %}
 <div class="text-shadow" data-aos="fade-right">
-	<h1> Posts em Destaque</h1>
-    <hr class="linha">
+
+    <h1 ><strong class="text-light d-inline bg-dark">POSTs </strong>
+    <span>Destaque</span></h1> 
+
 </div>
+{% endblock titulo_conteudo %}
+
 <!-- CONTENT -->
-<div class="conteudo">
+<div class="container-fluid">
 <div class="card-columns mt-4">
     <!-- FOR LOOP -->
 
