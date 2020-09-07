@@ -1,0 +1,39 @@
+/* --------------- colisao com animacao ------*/
+.ima {
+  overflow: hidden;
+}
+
+.card-img-top {
+  width: 100%;
+  transition: all 1s ease;
+}
+
+.card-img-top:hover {
+  transform: scale(1.3);
+}
+
+/* ---------- carousel -----------*/
+
+.carousel {
+  position: relative;
+}
+
+.carousel-caption {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px 10px;
+}
+
+.linha {
+  height: 10px;
+  border: 0;
+  box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+
+.text-shadow {
+  padding-top: 20px;
+}
+
+.card-columns {
+  padding-top: 20px;
+}

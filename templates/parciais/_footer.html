@@ -5,16 +5,26 @@
     <div class="container navbar-dark pt-4 mt-5">
         <div class="row">
             <div class="col">
-                <p class="text-left">Powered by Django</p>
+                <img src="{% static 'logos/logo11.png' %}" width="100" height="100" alt="swordpower" class="float-left">
+                <img src="{% static 'logos/logo13.png' %}" width="200" height="200" alt="swordpower" class="float-left">
             </div>
             <div class="col">
-                <p class="text-right">Made By Horacio Biancardi</p>
+                <h2 class="text-right"><strong>Sobre</strong></h2>
+                <p class="text-right">A equipe do swordpower e formada primcipalmente por Horacio Biancardi, Carla 
+                Biancardi e Kimberly Biancardi somos uma equipe pequena mais com pensamento em trazer conteúdos 
+                voltado na aréa de automação e afim com qualidade</p>
             </div>
         </div>
+        <p class="text-right">Made By Horacio Biancardi</p>
+            </div>
     </div>
 </footer>
 <!--/_footer.html-->
 
 
+<script src="{% static 'js/aos.js' %}"></script>
 <script src="{% static 'vendor/jquery/jquery.slim.min.js' %}"></script>
 <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script>
+  AOS.init();
+</script>

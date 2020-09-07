@@ -1,0 +1,53 @@
+
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-aos="zoom-in" data-aos-delay="200">
+        <ol class="carousel-indicators">
+            {% for post in posts %}
+            
+            {% if post.imagem_post %}
+                {% if forloop.first %}
+                    <li data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}" class="active"></li>
+                {% else %}
+                    <li data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}"></li>
+
+                {% endif %}
+            {% endif %}
+            {% endfor %}
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            {% for post in posts %}
+            {% if post.imagem_post %}
+                {% if forloop.first %}
+                    <div class="carousel-item active  ">
+                {% else %}
+                    <div class="carousel-item  ">
+                {% endif %}
+
+                <a href="{% url 'post_detalhes' post.id %}">
+                <img class="d-block w-100 h-50" class="h-50 d-inline-block" 
+                    src="{{ post.imagem_post.url }}"
+                    alt="{{ post.titulo_post }}">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>{{ post.titulo_post }}</h1>
+                    <p>{{ post.excerto_post }}</p>
+                </div>
+                
+                </div>
+
+             {% endif %}
+            {% endfor %}
+        </div>
+
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+        </div>
+    </div>

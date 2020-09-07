@@ -1,4 +1,5 @@
 from django import template
+from random import randint
 
 register = template.Library()
 
@@ -18,3 +19,6 @@ def plural_comentarios(num_comentarios):
     except:
         return f"{num_comentarios} Comentário(s)"
 
+@register.filter(name="aos")
+def aos(t,s=1):
+    return randint(s,t)
