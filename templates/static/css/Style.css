@@ -31,9 +31,3 @@ body>div.container {
 .text-shadow>h1>span {
   margin-left: .5em;
 }
-
-@media only screen and (max-width: 500px) {
-  .text-shadow {
-    text-align: center;
-  }
-}
