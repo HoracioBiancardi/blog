@@ -8,23 +8,23 @@
 
 {% comment %} {% include  'parciais/_carousel.html' %} {% endcomment %}
 
-{% comment %} {% block titulo_conteudo %}
+{% block titulo_conteudo %}
 <div class="text-shadow" data-aos="fade-right">
 
     <h1 ><strong class="text-light d-inline bg-dark">POSTs </strong>
     <span>Destaque</span></h1> 
 
 </div>
-{% endblock titulo_conteudo %} {% endcomment %}
+{% endblock titulo_conteudo %}
 
 <!-- CONTENT -->
-
+<div class="container-fluid">
 <div class="card-columns mt-4">
     <!-- FOR LOOP -->
 
     {% for post in posts %}
 
-    <div class="card shadow">
+    <div class="card shadow" data-aos="flip-up" data-aos-delay="{{5|aos}}00">
 
         {% if post.imagem_post %}
         <div class="ima">
@@ -63,7 +63,7 @@
     <!--/FOR LOOP-->
 </div>
 <!--/CONTENT-->
-
+</div>
 {% include  'parciais/_pagination.html' %}
 
 
