@@ -1,0 +1,73 @@
+{% load static %}
+<!--_head.html-->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175630194-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175630194-1');
+</script>
+<!-- Google adsense -->
+<script data-ad-client="ca-pub-5874050662783788" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="O blog Swordpower tem a finalidade de trazer conteúdos atualizado sobre as principais tecnológias e automação voltadas para a indústria.">
+<meta name="author" content="">
+
+<!-- Robots -->
+<meta name="robots" content="index, follow"> 
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+<link rel="canonical" href="https://blog.swordpower.tk{{ request.path }}">
+
+<link rel="shortcut icon" href="{% static 'logos/logo12.png' %}">
+
+<!-- SEO pagina principal -->
+
+<!-- Facebook Open Graph -->
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Blog do Swordpower">
+  <meta property="og:title" content="{{ post.titulo_post }}">
+  <meta property="og:url" content="https://blog.swordpower.tk{{ request.path }}">
+  
+  <meta property="og:description" content="{{ post.excerto_post }}">
+  <meta property="og:image" content="{{ post.imagem_post.url }}">
+  <meta property="og:image:secure_url" content="{{ post.imagem_post.url }}">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+  
+  <meta property="og:type" content="article">
+  <meta property="article:section" content="{{post.categoria_post}}">
+  <meta property="article:author" content="{{post.autor_post}}">
+
+ <!-- Google+ / Schema.org -->
+  <meta itemprop="name" content="Blog swordpower">
+  <meta itemprop="headline" content="{{ post.titulo_post }}">
+  <meta itemprop="description" content="{{ post.excerto_post }}">
+  <meta itemprop="image" content="{{ post.imagem_post.url }}">
+
+  <meta itemprop="author" content="{{post.autor_post}}">
+   
+
+ <!-- Twitter Cards -->
+  <meta name="twitter:title" content="Blog swordpower">
+  <meta name="twitter:url" content="https://blog.swordpower.tk{{ request.path }}">
+  <meta name="twitter:description" content="{{ post.excerto_post }}">
+  <meta name="twitter:image" content="{{ post.imagem_post.url }}>
+  <meta name="twitter:card" content="summary">
+
+
+
+
+
+<link href="{% static 'css/aos.css' %}" rel="stylesheet">
+<link href="{% static 'css/Style.css' %}" rel="stylesheet">
+
+
+<link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'vendor/bootstrap/css/theme_1564087106285.css' %}" rel="stylesheet">
+<!--/_head.html-->
