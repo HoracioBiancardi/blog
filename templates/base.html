@@ -1,13 +1,13 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-BR">
 
 <head>
     <title>{% block titulo %}
     {% endblock titulo %}</title>
 
-    {% if request.path == " " %}
+    {% if request.path == "/" %}
     {% include 'parciais/_head.html' %}
     {% else %}    
     {% include 'parciais/_head_detalhe.html' %}
