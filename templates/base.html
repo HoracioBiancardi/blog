@@ -7,7 +7,11 @@
     <title>{% block titulo %}
     {% endblock titulo %}</title>
 
+    {% if request.path == " " %}
     {% include 'parciais/_head.html' %}
+    {% else %}    
+    {% include 'parciais/_head_detalhe.html' %}
+    {% endif %}
 
 </head>
 
