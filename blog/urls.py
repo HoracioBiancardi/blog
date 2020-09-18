@@ -19,12 +19,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
-from blog.sitemaps import StaticSitemap, PostSitemap
+from blog.sitemaps import StaticSitemap, PostSitemap, CatSitemap
 from django.contrib.sitemaps.views import sitemap
 
 sitemaps = {
     "pages": StaticSitemap,
     "posts": PostSitemap,
+    "categoria": CatSitemap,
 }
 
 
