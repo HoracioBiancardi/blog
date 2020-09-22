@@ -133,6 +133,7 @@ USE_TZ = False
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "templates/static")]
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_DIR = os.path.join(BASE_DIR, "static")
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
@@ -149,17 +150,23 @@ MESSAGE_TAGS = {
     constants.INFO: "alert-info",
 }
 
-# summernote
-INSTALLED_APPS += ("django_summernote",)
-X_FRAME_OPTIONS = "SAMEORIGIN"
-SUMMERNOTE_THEME = "bs4"
-SUMMERNOTE_CONFIG = {
-    "summernote": {
-        # Change editor size
-        "width": "100%",
-        "height": "480",
-    },
-}
+# # summernote
+# INSTALLED_APPS += ("django_summernote",)
+# X_FRAME_OPTIONS = "SAMEORIGIN"
+# SUMMERNOTE_THEME = "bs4"
+# SUMMERNOTE_CONFIG = {
+#     "summernote": {
+#         # Change editor size
+#         "width": "100%",
+#         "height": "480",
+#     },
+# }
+
+# ckeditor
+INSTALLED_APPS += ("ckeditor",)
+INSTALLED_APPS += ("ckeditor_uploader",)
+CKEDITOR_UPLOAD_PATH = "uploads/"
+from .config_ckeditor import *
 
 
 INSTALLED_APPS += ("axes",)

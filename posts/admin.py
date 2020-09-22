@@ -1,10 +1,21 @@
 from django.contrib import admin
 from .models import Post
-from django_summernote.admin import SummernoteModelAdmin
+# from django_summernote.admin import SummernoteModelAdmin
+from django import forms
+from ckeditor_uploader.widgets import CKEditorUploadingWidget
+
+
+class PostAdminForm(forms.ModelForm):
+    conteudo_post = forms.CharField(widget=CKEditorUploadingWidget(),label="Conteudo")
+
+    class Meta:
+        model = Post
+        fields = '__all__'
 
 
 @admin.register(Post)
-class PostAdmin(SummernoteModelAdmin):
+# class PostAdmin(SummernoteModelAdmin):
+class PostAdmin(admin.ModelAdmin):
     list_display = (
         "id",
         "titulo_post",
@@ -20,5 +31,5 @@ class PostAdmin(SummernoteModelAdmin):
         "autor_post",
     )
     list_editable = ("publicado_post",)
-    summernote_fields = ("conteudo_post",)
-
+    #summernote_fields = ("conteudo_post",)
+    form = PostAdminForm
